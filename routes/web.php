@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use GuzzleHttp\Client;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,7 +14,24 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+
     return view('welcome');
+});
+
+Route::get('/posts', function () {
+
+    $client = new Client([
+        // Base URI is used with relative requests
+        'base_uri' => 'https://jsonplaceholder.typicode.com/posts',
+        'timeout'  => 2.0,
+    ]);
+
+    $response = $client->request('GET', 'posts');
+
+    $posts= json_decode($response->getBody()->getContents());
+
+    return view('posts.index', compact('posts'));
+
 });
 
 Auth::routes();
