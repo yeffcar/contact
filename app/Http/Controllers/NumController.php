@@ -42,7 +42,7 @@ class NumController extends Controller
     $cubo = array_map( function ($n)
     {
         return($n * $n * $n);
-        
+
     }, $valores);
 
     echo "Cubo";
@@ -50,6 +50,14 @@ class NumController extends Controller
     var_dump($cubo);
     echo "<br/>";
    
+    //ORDENAR DE MENOR A MAYOR
+    asort($cubo);
+    echo "MENOR A MAYOR";
+    echo "<br/>";
+    foreach ($cubo as $key => $val) {
+        echo "$key = $val\n";
+    }
+
  }
 
 }
