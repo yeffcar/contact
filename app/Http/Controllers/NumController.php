@@ -20,7 +20,7 @@ class NumController extends Controller
         $num_aleatorio = rand(1,100);
         array_push($valores,$num_aleatorio);
     }
-    echo "10 Aleatorios";
+    echo "10 ALEATORIOS";
     echo "<br/>";
     var_dump ($valores);
     echo "<br/>";
@@ -33,7 +33,7 @@ class NumController extends Controller
         return($var & 1);
     });
 
-    echo "Impares";
+    echo "IMPARES";
     echo "<br/>";
     var_dump($impares);
     echo "<br/>";
@@ -45,7 +45,7 @@ class NumController extends Controller
 
     }, $valores);
 
-    echo "Cubo";
+    echo "CUBO";
     echo "<br/>";
     var_dump($cubo);
     echo "<br/>";
@@ -57,7 +57,6 @@ class NumController extends Controller
     foreach ($cubo as $key => $val) {
         echo "$key = $val\n";
     }
-
  }
 
 }
