@@ -19,6 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('/posts', [App\Http\Controllers\PostsController::class, 'index'])->name('api');
+Route::get('/num', [App\Http\Controllers\NumController::class, 'index'])->name('num');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/contact-form', [App\Http\Controllers\ContactController::class, 'welcome'])->name('contact-form');
 Route::post('/contact-form', [App\Http\Controllers\ContactController::class, 'storeContactForm'])->name('contact-form.store');
