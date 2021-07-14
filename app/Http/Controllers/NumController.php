@@ -24,10 +24,9 @@ class NumController extends Controller
     echo "<br/>";
     var_dump ($valores);
     echo "<br/>";
+
+
     //VALORES IMPARES
-
-    
-
     $impares = array_filter($valores, function ($var)
     {
         // Retorna siempre que el número entero sea impar
@@ -37,6 +36,18 @@ class NumController extends Controller
     echo "Impares";
     echo "<br/>";
     var_dump($impares);
+    echo "<br/>";
+
+    //ELEVAR AL CUBO
+    $cubo = array_map( function ($n)
+    {
+        return($n * $n * $n);
+        
+    }, $valores);
+
+    echo "Cubo";
+    echo "<br/>";
+    var_dump($cubo);
     echo "<br/>";
    
  }

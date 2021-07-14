@@ -20,10 +20,6 @@
 
         @endforeach
 
-       
-
     </div>
-
-	
 </body>
 </html>
